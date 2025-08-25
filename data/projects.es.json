@@ -1,0 +1,63 @@
+[
+  {
+    "id": "consultoria",
+    "titulo": "Consultoría empresarial web",
+    "descripcion": "Sitio de consultoría con foco en conversión, responsive, accesible y rendimiento.",
+    "logros": [
+      "SEO básico y métricas de conversión",
+      "Secciones dinámicas y llamados a la acción",
+      "Optimización de imágenes y tipografías"
+    ],
+    "stack": ["HTML/CSS", "Bootstrap", "JS"],
+    "imagen": "assets/img/consultoria-hero.webp",
+    "link": "https://esdmproyectos.com/Consultoria_empresarial_web/"
+  },
+  {
+    "id": "app-educativa",
+    "titulo": "App educativa multiplataforma",
+    "descripcion": "Aprendizaje adaptativo, tests interactivos y progreso visual.",
+    "logros": [
+      "UX accesible para dislexia",
+      "Gráficas de progreso",
+      "Flutter + FastAPI"
+    ],
+    "stack": ["Flutter", "FastAPI", "SQLite"],
+    "imagen": "assets/img/app-educativa-hero.webp"
+  },
+  {
+    "id": "java-rmi",
+    "titulo": "Sistema distribuido Java (RMI)",
+    "descripcion": "Gestión de pacientes, médicos y citas con cliente Swing.",
+    "logros": [
+      "Arquitectura modular",
+      "Validación y seguridad remota",
+      "Persistencia con SQLite"
+    ],
+    "stack": ["Java", "RMI", "SQLite"],
+    "imagen": "assets/img/java-rmi-hero.webp"
+  },
+  {
+    "id": "fastapi-mascotas",
+    "titulo": "API gestión de mascotas",
+    "descripcion": "API JWT para usuarios y eventos médicos.",
+    "logros": [
+      "Autenticación JWT",
+      "CRUD completo",
+      "Documentación OpenAPI"
+    ],
+    "stack": ["FastAPI", "Python", "SQLite"],
+    "imagen": "assets/img/fastapi-mascotas-hero.webp"
+  },
+  {
+    "id": "liga-mx",
+    "titulo": "Modelo relacional Liga MX",
+    "descripcion": "Modelo E/R con triggers, SP y consultas complejas.",
+    "logros": [
+      "Integridad referencial",
+      "Normalización",
+      "Datos de ejemplo"
+    ],
+    "stack": ["MySQL", "SQL"],
+    "imagen": "assets/img/liga-mx-hero.webp"
+  }
+]

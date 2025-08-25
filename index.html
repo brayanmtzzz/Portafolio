@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="es" data-bs-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Brayan A. Martínez — Portafolio</title>
+  <meta name="description" content="Portafolio de Brayan Anuhar Martínez García: desarrollo full‑stack, APIs escalables y experiencias accesibles.">
+  <meta name="theme-color" content="#0b1020">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Brayan A. Martínez — Portafolio">
+  <meta property="og:description" content="Desarrollo full‑stack con enfoque en arquitecturas limpias y accesibilidad.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/img/og-image.webp">
+  <meta property="og:url" content="https://<tu-usuario>.github.io/<tu-repo>/">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/perfil.webp">
+
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Sora:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap + Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navMain" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" tabindex="0">
+
+  <!-- NAVBAR -->
+  <nav id="navMain" class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top py-2 border-0">
+    <div class="container">
+      <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="#home">
+        <img src="assets/img/perfil.webp" alt="Brayan" class="brand-avatar">
+        <span>Brayan A. Martínez</span>
+      </a>
+
+      <div class="d-flex align-items-center gap-2 order-lg-2">
+        <button class="btn btn-outline-light btn-sm" id="langToggle" aria-label="Change language">ES / EN</button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navCollapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navCollapse">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
+          <li class="nav-item"><a class="nav-link" href="#habilidades">Habilidades</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experiencia">Experiencia</a></li>
+          <li class="nav-item"><a class="nav-link" href="#logros">Logros</a></li>
+          <li class="nav-item ms-lg-2">
+            <a class="btn btn-primary btn-sm" href="#contacto">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="home" class="hero-wrap">
+    <div class="container hero-container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6 order-2 order-lg-1">
+          <span class="badge rounded-pill bg-primary-subtle text-primary mb-3">
+            Desarrollador Full‑Stack / Est. Ing. Software
+          </span>
+          <h1 class="display-5 fw-800 mb-3">
+            <span>Construyo</span>
+            <span class="txt-gradient">APIs escalables</span>
+            <span>y experiencias accesibles.</span>
+          </h1>
+          <p class="lead text-secondary mb-4">
+            Enfocado en arquitecturas limpias, FastAPI, Flutter, Java y bases de datos SQL/NoSQL.
+          </p>
+          <div class="d-flex flex-wrap gap-2">
+            <a href="#proyectos" class="btn btn-primary">Ver proyectos</a>
+            <a href="docs/Brayan_Anuhar_Martínez_García_CV.pdf" class="btn btn-outline-light" download>Descargar CV</a>
+            <a href="#contacto" class="btn btn-link link-light">Escríbeme</a>
+          </div>
+
+          <div class="stack-chips mt-4">
+            <span class="chip">FastAPI</span><span class="chip">Flutter</span><span class="chip">Java</span>
+            <span class="chip">Spring</span><span class="chip">Node</span>
+            <span class="chip">MySQL</span><span class="chip">PostgreSQL</span><span class="chip">MongoDB</span>
+            <span class="chip">Git</span>
+          </div>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2 text-center">
+          <div class="profile-frame">
+            <img src="assets/img/perfil.webp" alt="Foto de Brayan" class="profile-photo">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-bg"></div>
+  </header>
+
+  <!-- PROYECTOS (se cargan desde JSON con main.js) -->
+  <section id="proyectos" class="section-pad">
+    <div class="container">
+      <div class="d-flex flex-column flex-lg-row align-items-start align-items-lg-end justify-content-between mb-4 gap-2">
+        <h2 class="h1 fw-800 mb-0">Proyectos destacados</h2>
+        <span class="text-secondary">Selección profesional</span>
+      </div>
+
+      <!-- Grid vacío: lo llena main.js con projects.es/en.json -->
+      <div class="row g-4"></div>
+    </div>
+  </section>
+
+  <!-- SOBRE MÍ -->
+  <section id="sobre-mi" class="section-pad alt">
+    <div class="container">
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-5">
+          <div class="about-photo">
+            <img src="assets/img/perfil.webp" alt="Brayan Anuhar Martínez García">
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <h2 class="h1 fw-800 mb-3">Sobre mí</h2>
+          <p class="text-secondary mb-3">
+            Estudiante de Ingeniería de Software (UV, 7º semestre). Construyo soluciones full‑stack con enfoque en arquitectura limpia,
+            rendimiento y accesibilidad. Me gustan FastAPI, Flutter, Java y el diseño de datos en SQL/NoSQL.
+          </p>
+          <div class="row g-3 small">
+            <div class="col-6">
+              <div class="info-kv"><span>Edad</span><strong>21</strong></div>
+              <div class="info-kv"><span>Nacimiento</span><strong>11/08/2004</strong></div>
+              <div class="info-kv"><span>Ciudad</span><strong>Coatzacoalcos, Ver.</strong></div>
+            </div>
+            <div class="col-6">
+              <div class="info-kv"><span>Semestre</span><strong>7º</strong></div>
+              <div class="info-kv"><span>Universidad</span><strong>Universidad Veracruzana</strong></div>
+              <div class="info-kv"><span>Idiomas</span><strong>ES / EN</strong></div>
+            </div>
+          </div>
+          <div class="mt-3 d-flex gap-2">
+            <a href="https://github.com/brayanmtzzz" target="_blank" class="btn btn-outline-light btn-sm"><i class="bi bi-github"></i> GitHub</a>
+            <a href="https://www.linkedin.com/in/brayan-anuhar-martínez-garcía-1778b8329" target="_blank" class="btn btn-outline-light btn-sm"><i class="bi bi-linkedin"></i> LinkedIn</a>
+            <a href="docs/Brayan_Anuhar_Martínez_García_CV.pdf" class="btn btn-primary btn-sm" download>Descargar CV</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HABILIDADES -->
+  <section id="habilidades" class="section-pad">
+    <div class="container">
+      <h2 class="h1 fw-800 mb-4">Habilidades</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="skill-card">
+            <h3 class="h6">Lenguajes</h3>
+            <ul class="mini-bullets">
+              <li>Java, JavaScript, Python, Dart</li>
+              <li>C++, C#</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="skill-card">
+            <h3 class="h6">Frameworks & Tools</h3>
+            <ul class="mini-bullets">
+              <li>FastAPI, Flutter, Vue, Node.js, Spring Boot</li>
+              <li>Git, Docker, REST, CI/CD</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="skill-card">
+            <h3 class="h6">Datos</h3>
+            <ul class="mini-bullets">
+              <li>MySQL, PostgreSQL, SQLite</li>
+              <li>MongoDB</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="skill-card">
+          <h3 class="h6">Otros</h3>
+            <ul class="mini-bullets">
+              <li>HTML/CSS, Figma</li>
+              <li>Scrum, Kanban</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCIA -->
+  <section id="experiencia" class="section-pad alt">
+    <div class="container">
+      <h2 class="h1 fw-800 mb-4">Experiencia</h2>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <h3 class="h6 mb-1">Desarrollador Full Stack — Plataforma móvil</h3>
+            <div class="small text-secondary">03/2025 – 05/2025</div>
+            <ul class="mini-bullets mt-2">
+              <li>Flutter + FastAPI, aprendizaje adaptativo</li>
+              <li>Tests interactivos, progreso y offline sync</li>
+              <li>UX accesible para dislexia</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <h3 class="h6 mb-1">Desarrollador Java — Sistema distribuido</h3>
+            <div class="small text-secondary">04/2025</div>
+            <ul class="mini-bullets mt-2">
+              <li>Java RMI con persistencia SQLite</li>
+              <li>Cliente Swing, servidor modular</li>
+              <li>Validación y seguridad remota</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <h3 class="h6 mb-1">Desarrollador Backend — API mascotas</h3>
+            <div class="small text-secondary">03/2025</div>
+            <ul class="mini-bullets mt-2">
+              <li>Auth JWT, CRUD y modularidad</li>
+              <li>FastAPI + SQLite</li>
+              <li>OpenAPI</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <h3 class="h6 mb-1">Desarrollador Web — Freelance</h3>
+            <div class="small text-secondary">11/2024 – 12/2024</div>
+            <ul class="mini-bullets mt-2">
+              <li>Sitio responsivo con integración a Moodle</li>
+              <li>SEO básico y despliegue</li>
+              <li>Optimización móvil</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOGROS -->
+  <section id="logros" class="section-pad">
+    <div class="container">
+      <h2 class="h1 fw-800 mb-4">Logros</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="card-glass h-100">
+            <div class="card-body">
+              <h3 class="h5 fw-bold mb-2">2º lugar — Feria de Emprendedores</h3>
+              <p class="small text-secondary mb-2">
+                Categoría Base Tecnológica con “Letras Amigas” (05/2025).
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Certificados: solo los que tengas -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card-glass h-100">
+            <div class="card-body">
+              <h3 class="h5 fw-bold mb-2">HTML & CSS Fundamentals — SoloLearn</h3>
+              <p class="small text-secondary mb-2">06/2021</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCACIÓN -->
+  <section id="educacion" class="section-pad alt">
+    <div class="container">
+      <h2 class="h1 fw-800 mb-3">Educación</h2>
+      <p class="text-secondary mb-0">
+        Ingeniería de Software (2022 – Actualidad) — Universidad Veracruzana, Campus Coatzacoalcos.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="section-pad">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-5">
+          <h2 class="h1 fw-800 mb-3">Contacto</h2>
+          <p class="text-secondary">
+            ¿Hablamos de tu proyecto? Respondo normalmente en 24–48 h.
+          </p>
+          <ul class="list-unstyled small contact-list mt-3">
+            <li><i class="bi bi-envelope"></i> <a href="mailto:brayananuharmtz11@gmail.com">brayananuharmtz11@gmail.com</a></li>
+            <li><i class="bi bi-telephone"></i> <a href="tel:+529211515530">+52 921 151 5530</a></li>
+            <li><i class="bi bi-github"></i> <a href="https://github.com/brayanmtzzz" target="_blank">github.com/brayanmtzzz</a></li>
+            <li><i class="bi bi-linkedin"></i> <a href="https://www.linkedin.com/in/brayan-anuhar-martínez-garcía-1778b8329" target="_blank">LinkedIn</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-7">
+          <form class="card-glass p-3" action="mailto:brayananuharmtz11@gmail.com" method="post" enctype="text/plain">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">Nombre</label>
+                <input type="text" class="form-control" name="name" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" name="email" required>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Mensaje</label>
+                <textarea class="form-control" rows="5" name="message" required></textarea>
+              </div>
+              <div class="col-12 d-flex gap-2">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+                <a href="docs/Brayan_Anuhar_Martínez_García_CV.pdf" class="btn btn-outline-light" download>Descargar CV</a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container py-4 text-center small text-secondary">
+      © <span id="year"></span> Brayan Anuhar Martínez García — Todos los derechos reservados.
+    </div>
+  </footer>
+
+  <!-- Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Lógica del sitio (idioma + carga de proyectos desde JSON) -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
