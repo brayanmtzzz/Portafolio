@@ -57,15 +57,21 @@ function applyI18n() {
     const k = el.getAttribute('data-key');
     if (T[LANG][k]) el.textContent = T[LANG][k];
   });
-  langToggle.textContent = LANG === 'es' ? 'EN' : 'ES';
+  if (langToggle) {
+    langToggle.textContent = LANG === 'es' ? 'EN' : 'ES';
+  }
   document.documentElement.lang = LANG;
-  loadProjects();
+  loadProjects(); // <-- esto carga el JSON del idioma actual
 }
-langToggle.addEventListener('click', () => {
-  LANG = LANG === 'es' ? 'en' : 'es';
-  localStorage.setItem('lang', LANG);
-  applyI18n();
-});
+
+// Toggle idioma
+if (langToggle) {
+  langToggle.addEventListener('click', () => {
+    LANG = (LANG === 'es') ? 'en' : 'es';
+    localStorage.setItem('lang', LANG);
+    applyI18n();
+  });
+}
 
 // Navbar scrolled
 const nav = document.getElementById('navMain');
@@ -74,21 +80,25 @@ function onScroll() {
   else nav.classList.remove('scrolled');
 }
 document.addEventListener('scroll', onScroll);
-onScroll();
 
 // Footer year
-document.getElementById('year').textContent = new Date().getFullYear();
+const yearEl = document.getElementById('year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 // ==================== PROYECTOS DESDE JSON ====================
 async function loadProjects() {
   const grid = document.getElementById('projectsGrid');
   const fallback = document.getElementById('projectsFallback');
+  if (!grid || !fallback) return;
+
   grid.innerHTML = '';
   fallback.classList.add('d-none');
+
   try {
-    const res = await fetch(`data/projects.${LANG}.json`, {cache:'no-store'});
+    const res = await fetch(`data/projects.${LANG}.json`, { cache: 'no-store' });
     if (!res.ok) throw new Error('HTTP ' + res.status);
     const list = await res.json();
+
     list.forEach(p => {
       const col = document.createElement('div');
       col.className = 'col-md-6'; // 2 por fila desktop
@@ -105,8 +115,8 @@ async function loadProjects() {
               ${(p.stack || []).map(s => `<span class="tag">${s}</span>`).join('')}
             </div>
             <div class="d-flex gap-2 mt-3">
-              ${p.repo ? `<a class="btn btn-outline-light btn-sm" href="${p.repo}" target="_blank"><i class="bi bi-github"></i> GitHub</a>` : ''}
-              ${p.link ? `<a class="btn btn-primary btn-sm" href="${p.link}" target="_blank"><i class="bi bi-box-arrow-up-right"></i> Link</a>` : ''}
+              ${p.repo ? `<a class="btn btn-outline-light btn-sm" href="${p.repo}" target="_blank" rel="noopener"><i class="bi bi-github"></i> GitHub</a>` : ''}
+              ${p.link ? `<a class="btn btn-primary btn-sm" href="${p.link}" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right"></i> ${LANG === 'es' ? 'Demo' : 'Demo'}</a>` : ''}
             </div>
           </div>
         </article>
@@ -116,6 +126,9 @@ async function loadProjects() {
   } catch (e) {
     console.error('Error cargando proyectos', e);
     fallback.classList.remove('d-none');
+    fallback.textContent = LANG === 'es'
+      ? 'No se pudieron cargar los proyectos.'
+      : 'Projects could not be loaded.';
   }
 }
 
@@ -180,3 +193,18 @@ async function loadProjects() {
     if (e.code === 'ArrowLeft') speed = Math.max(20, speed - 10);
   });
 })();
+
+// ===========================
+// INIT 
+// ===========================
+document.addEventListener('DOMContentLoaded', () => {
+  if (!localStorage.getItem('lang')) {
+    LANG = 'es';
+    localStorage.setItem('lang', 'es');
+  } else {
+    LANG = localStorage.getItem('lang') || 'es';
+  }
+
+  applyI18n();
+  onScroll();
+});

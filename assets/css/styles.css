@@ -229,8 +229,21 @@ html,body{
 /* =========================
    PROYECTOS
 ========================= */
-.project-card .thumb{height:180px; background:#0f1630}
-.project-card img{width:100%; height:100%; object-fit:cover}
+.project-card .thumb{
+  width: 100%;
+  aspect-ratio: 16 / 9; /* fuerza 16:9 */
+  background:#0f1630;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.project-card img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* 🔥 Ahora siempre llena el contenedor */
+  object-position: center;
+}
 .project-card .meta{
   display:flex;
   gap:8px;
@@ -256,7 +269,7 @@ html,body{
 ========================= */
 @media (max-width: 991.98px){
   .section-pad{padding:70px 0}
-  .project-card .thumb{height:160px}
+  .project-card .thumb{aspect-ratio: 16/9; height:auto}
 }
 @media (max-width: 575.98px){
   .hero-h1{font-size:1.9rem}
