@@ -1,63 +1,48 @@
 [
   {
     "id": "consultoria",
-    "titulo": "Business consulting website",
-    "descripcion": "Consulting site focused on conversion, responsive, accessible and fast.",
-    "logros": [
-      "Basic SEO & conversion metrics",
-      "Dynamic sections & CTAs",
-      "Optimized images & fonts"
-    ],
-    "stack": ["HTML/CSS", "Bootstrap", "JS"],
+    "titulo": "Business Consulting Website",
+    "descripcion": "Professional site focused on services and conversion; modern, fast UI.",
+    "logros": ["Basic SEO", "Effective CTAs", "Optimized images & fonts"],
+    "stack": ["HTML", "CSS", "Bootstrap", "JS"],
     "imagen": "assets/img/consultoria-hero.webp",
-    "link": "https://esdmproyectos.com/Consultoria_empresarial_web/"
+    "link": "https://esdmproyectos.com/Consultoria_empresarial_web/",
+    "fecha": "Aug 2025"
   },
   {
     "id": "app-educativa",
-    "titulo": "Multiplatform educational app",
-    "descripcion": "Adaptive learning, interactive tests and visual progress.",
-    "logros": [
-      "Dyslexia-friendly UX",
-      "Progress charts",
-      "Flutter + FastAPI"
-    ],
+    "titulo": "Adaptive Learning Mobile Platform",
+    "descripcion": "Cross-platform app with interactive tests, progress and offline mode.",
+    "logros": ["Accessible UX", "Charts", "Offline sync"],
     "stack": ["Flutter", "FastAPI", "SQLite"],
-    "imagen": "assets/img/app-educativa-hero.webp"
+    "imagen": "assets/img/app-educativa-hero.webp",
+    "fecha": "Mar 2025 – May 2025"
   },
   {
     "id": "java-rmi",
-    "titulo": "Distributed system in Java (RMI)",
-    "descripcion": "Manage patients, doctors & appointments with a Swing client.",
-    "logros": [
-      "Modular architecture",
-      "Remote security & validation",
-      "SQLite persistence"
-    ],
+    "titulo": "Distributed System for Medical Management",
+    "descripcion": "Java RMI for patients & appointments; SQLite server and Swing client.",
+    "logros": ["Modular architecture", "Remote validation", "Design patterns"],
     "stack": ["Java", "RMI", "SQLite"],
-    "imagen": "assets/img/java-rmi-hero.webp"
+    "imagen": "assets/img/java-rmi-hero.webp",
+    "fecha": "Apr 2025"
   },
   {
     "id": "fastapi-mascotas",
-    "titulo": "Pets management API",
-    "descripcion": "JWT API for users and medical events.",
-    "logros": [
-      "JWT authentication",
-      "Full CRUD",
-      "OpenAPI docs"
-    ],
+    "titulo": "Pets Management API",
+    "descripcion": "JWT API for users & medical events; modular architecture.",
+    "logros": ["JWT auth", "Full CRUD", "OpenAPI"],
     "stack": ["FastAPI", "Python", "SQLite"],
-    "imagen": "assets/img/fastapi-mascotas-hero.webp"
+    "imagen": "assets/img/fastapi-mascotas-hero.webp",
+    "fecha": "Mar 2025"
   },
   {
     "id": "liga-mx",
-    "titulo": "Liga MX relational model",
+    "titulo": "Data Modeling — Liga MX",
     "descripcion": "E/R model with triggers, SP and complex queries.",
-    "logros": [
-      "Referential integrity",
-      "Normalization",
-      "Sample data"
-    ],
+    "logros": ["Referential integrity", "Normalization", "Sample data"],
     "stack": ["MySQL", "SQL"],
-    "imagen": "assets/img/liga-mx-hero.webp"
+    "imagen": "assets/img/liga-mx-hero.webp",
+    "fecha": "2022 – Present"
   }
 ]

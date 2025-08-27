@@ -1,63 +1,48 @@
 [
   {
     "id": "consultoria",
-    "titulo": "Consultoría empresarial web",
-    "descripcion": "Sitio de consultoría con foco en conversión, responsive, accesible y rendimiento.",
-    "logros": [
-      "SEO básico y métricas de conversión",
-      "Secciones dinámicas y llamados a la acción",
-      "Optimización de imágenes y tipografías"
-    ],
-    "stack": ["HTML/CSS", "Bootstrap", "JS"],
+    "titulo": "Sitio web para Consultoría Empresarial",
+    "descripcion": "Página profesional enfocada en presentar servicios y captar clientes, UI moderna y rápida.",
+    "logros": ["SEO básico", "CTAs efectivos", "Optimización de imágenes y tipografías"],
+    "stack": ["HTML", "CSS", "Bootstrap", "JS"],
     "imagen": "assets/img/consultoria-hero.webp",
-    "link": "https://esdmproyectos.com/Consultoria_empresarial_web/"
+    "link": "https://esdmproyectos.com/Consultoria_empresarial_web/",
+    "fecha": "Ago 2025"
   },
   {
     "id": "app-educativa",
-    "titulo": "App educativa multiplataforma",
-    "descripcion": "Aprendizaje adaptativo, tests interactivos y progreso visual.",
-    "logros": [
-      "UX accesible para dislexia",
-      "Gráficas de progreso",
-      "Flutter + FastAPI"
-    ],
+    "titulo": "Plataforma móvil para aprendizaje adaptativo",
+    "descripcion": "App multiplataforma con tests interactivos, progreso y modo offline.",
+    "logros": ["UX accesible", "Gráficas", "Sync offline"],
     "stack": ["Flutter", "FastAPI", "SQLite"],
-    "imagen": "assets/img/app-educativa-hero.webp"
+    "imagen": "assets/img/app-educativa-hero.webp",
+    "fecha": "Mar 2025 – May 2025"
   },
   {
     "id": "java-rmi",
-    "titulo": "Sistema distribuido Java (RMI)",
-    "descripcion": "Gestión de pacientes, médicos y citas con cliente Swing.",
-    "logros": [
-      "Arquitectura modular",
-      "Validación y seguridad remota",
-      "Persistencia con SQLite"
-    ],
+    "titulo": "Sistema distribuido para gestión médica",
+    "descripcion": "Java RMI para pacientes y citas; servidor SQLite y cliente Swing.",
+    "logros": ["Arquitectura modular", "Validación remota", "Patrones de diseño"],
     "stack": ["Java", "RMI", "SQLite"],
-    "imagen": "assets/img/java-rmi-hero.webp"
+    "imagen": "assets/img/java-rmi-hero.webp",
+    "fecha": "Abr 2025"
   },
   {
     "id": "fastapi-mascotas",
-    "titulo": "API gestión de mascotas",
-    "descripcion": "API JWT para usuarios y eventos médicos.",
-    "logros": [
-      "Autenticación JWT",
-      "CRUD completo",
-      "Documentación OpenAPI"
-    ],
+    "titulo": "API para gestión de mascotas",
+    "descripcion": "API JWT para usuarios y eventos médicos; arquitectura modular.",
+    "logros": ["Auth JWT", "CRUD completo", "OpenAPI"],
     "stack": ["FastAPI", "Python", "SQLite"],
-    "imagen": "assets/img/fastapi-mascotas-hero.webp"
+    "imagen": "assets/img/fastapi-mascotas-hero.webp",
+    "fecha": "Mar 2025"
   },
   {
     "id": "liga-mx",
-    "titulo": "Modelo relacional Liga MX",
+    "titulo": "Modelado de Datos — Liga MX",
     "descripcion": "Modelo E/R con triggers, SP y consultas complejas.",
-    "logros": [
-      "Integridad referencial",
-      "Normalización",
-      "Datos de ejemplo"
-    ],
+    "logros": ["Integridad referencial", "Normalización", "Datos de ejemplo"],
     "stack": ["MySQL", "SQL"],
-    "imagen": "assets/img/liga-mx-hero.webp"
+    "imagen": "assets/img/liga-mx-hero.webp",
+    "fecha": "2022 – Actualidad"
   }
 ]
