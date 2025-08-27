@@ -4,19 +4,20 @@
     "titulo": "Sitio web para Consultoría Empresarial",
     "descripcion": "Página profesional enfocada en presentar servicios y captar clientes, UI moderna y rápida.",
     "logros": ["SEO básico", "CTAs efectivos", "Optimización de imágenes y tipografías"],
-    "stack": ["HTML", "CSS", "Bootstrap", "JS"],
-    "imagen": "assets/img/consultoria-hero.webp",
-    "link": "https://esdmproyectos.com/Consultoria_empresarial_web/",
-    "fecha": "Ago 2025"
+    "stack": ["HTML", "CSS", "Bootstrap", "JS", "PHP"],
+    "imagen": "assets/img/projects/consultoria.png",
+    "fecha": "Ago 2025",
+    "link": "https://esdmproyectos.com/Consultoria_empresarial_web/"
   },
   {
     "id": "app-educativa",
     "titulo": "Plataforma móvil para aprendizaje adaptativo",
-    "descripcion": "App multiplataforma con tests interactivos, progreso y modo offline.",
-    "logros": ["UX accesible", "Gráficas", "Sync offline"],
+    "descripcion": "App multiplataforma en Flutter + FastAPI con tests interactivos, progreso y modo offline.",
+    "logros": ["UX accesible", "Gráficas de progreso", "Sync offline"],
     "stack": ["Flutter", "FastAPI", "SQLite"],
-    "imagen": "assets/img/app-educativa-hero.webp",
-    "fecha": "Mar 2025 – May 2025"
+    "imagen": "assets/img/projects/consultoria.png",
+    "fecha": "Mar 2025 – May 2025",
+    "link": "https://brayanmtzzz.github.io/app-educativa"
   },
   {
     "id": "java-rmi",
@@ -24,25 +25,26 @@
     "descripcion": "Java RMI para pacientes y citas; servidor SQLite y cliente Swing.",
     "logros": ["Arquitectura modular", "Validación remota", "Patrones de diseño"],
     "stack": ["Java", "RMI", "SQLite"],
-    "imagen": "assets/img/java-rmi-hero.webp",
-    "fecha": "Abr 2025"
+    "imagen": "assets/img/projects/consultoria.png",
+    "fecha": "Abr 2025",
+    "repo": "https://github.com/brayanmtzzz/Sistema-distribuido-Cliente-Servidor"
   },
   {
-    "id": "fastapi-mascotas",
-    "titulo": "API para gestión de mascotas",
-    "descripcion": "API JWT para usuarios y eventos médicos; arquitectura modular.",
-    "logros": ["Auth JWT", "CRUD completo", "OpenAPI"],
-    "stack": ["FastAPI", "Python", "SQLite"],
-    "imagen": "assets/img/fastapi-mascotas-hero.webp",
-    "fecha": "Mar 2025"
+    "id": "web-freelance",
+    "titulo": "Desarrollador Web — Proyecto freelance",
+    "descripcion": "Sitio web responsivo para institución educativa con integración a Moodle.",
+    "logros": ["Diseño adaptable", "Optimización SEO", "Despliegue en móviles y desktop"],
+    "stack": ["HTML", "CSS", "Bootstrap"],
+    "imagen": "assets/img/projects/consultoria.png",
+    "fecha": "Nov 2024 – Dic 2024"
   },
   {
     "id": "liga-mx",
     "titulo": "Modelado de Datos — Liga MX",
-    "descripcion": "Modelo E/R con triggers, SP y consultas complejas.",
+    "descripcion": "Modelo E/R con triggers, procedimientos almacenados y consultas complejas.",
     "logros": ["Integridad referencial", "Normalización", "Datos de ejemplo"],
     "stack": ["MySQL", "SQL"],
-    "imagen": "assets/img/liga-mx-hero.webp",
-    "fecha": "2022 – Actualidad"
+    "imagen": "assets/img/projects/consultoria.png",
+    "fecha": "Dic 2023 – Ene 2024"
   }
 ]

@@ -105,8 +105,8 @@ async function loadProjects() {
               ${(p.stack || []).map(s => `<span class="tag">${s}</span>`).join('')}
             </div>
             <div class="d-flex gap-2 mt-3">
-              ${p.repo ? `<a class="btn btn-outline-light btn-sm" href="${p.repo}" target="_blank"><i class="bi bi-github"></i> Code</a>` : ''}
-              ${p.link ? `<a class="btn btn-primary btn-sm" href="${p.link}" target="_blank"><i class="bi bi-box-arrow-up-right"></i> Demo</a>` : ''}
+              ${p.repo ? `<a class="btn btn-outline-light btn-sm" href="${p.repo}" target="_blank"><i class="bi bi-github"></i> GitHub</a>` : ''}
+              ${p.link ? `<a class="btn btn-primary btn-sm" href="${p.link}" target="_blank"><i class="bi bi-box-arrow-up-right"></i> Link</a>` : ''}
             </div>
           </div>
         </article>
