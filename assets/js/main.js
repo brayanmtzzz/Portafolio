@@ -11,6 +11,7 @@ const T = {
     about_desc: "Estudiante de Ingeniería de Software (UV, 7º semestre). Construyo soluciones full-stack con enfoque en arquitectura limpia, rendimiento y accesibilidad. Me gustan FastAPI, Flutter, Java y el diseño de datos en SQL/NoSQL.",
     about_age_label: "Edad", about_bday_label: "Nacimiento", about_city_label: "Ciudad", about_semester_label: "Semestre", about_university_label: "Universidad", about_langs_label: "Idiomas",
     skills_title: "Habilidades",
+    skills_subtitle: "Stack principal y herramientas de trabajo.",
     projects_title: "Proyectos destacados",
     path_title: "Trayectoria", tab_awards: "Logros", tab_certs: "Certificaciones", tab_edu: "Educación",
     award_feria_title: "2º lugar — Feria de Emprendedores",
@@ -32,6 +33,7 @@ const T = {
     about_desc: "Software Engineering student (UV, 7th semester). I build full-stack solutions focused on clean architecture, performance and accessibility. I enjoy FastAPI, Flutter, Java and data design in SQL/NoSQL.",
     about_age_label: "Age", about_bday_label: "Birthdate", about_city_label: "City", about_semester_label: "Semester", about_university_label: "University", about_langs_label: "Languages",
     skills_title: "Skills",
+    skills_subtitle: "Main stack and working tools.",
     projects_title: "Featured projects",
     path_title: "Path", tab_awards: "Awards", tab_certs: "Certifications", tab_edu: "Education",
     award_feria_title: "2nd place — Entrepreneurs Fair",
@@ -117,20 +119,64 @@ async function loadProjects() {
   }
 }
 
-// ==================== HABILIDADES ====================
-const track = document.getElementById('skillsTrack');
-const firstRow = track.querySelector('.skills-row');
-const cloneRow = track.querySelector('.skills-row.clone');
-cloneRow.innerHTML = firstRow.innerHTML;
+// ===========================
+// HABILIDADES — Ticker Pro
+// Loop infinito real + Drag
+// ===========================
+(function () {
+  const track = document.querySelector('#habilidades .skills-track');
+  const marquee = track?.querySelector('.skills-marquee');
+  const line = marquee?.querySelector('.skills-line');
+  if (!track || !marquee || !line) return;
 
-track.addEventListener('mouseenter', ()=> {
-  firstRow.style.animationPlayState = 'paused';
-  cloneRow.style.animationPlayState = 'paused';
-});
-track.addEventListener('mouseleave', ()=> {
-  firstRow.style.animationPlayState = 'running';
-  cloneRow.style.animationPlayState = 'running';
-});
+  // Duplicar contenido (solo para loop interno)
+  const clone = line.cloneNode(true);
+  clone.setAttribute('aria-hidden', 'true');
+  marquee.appendChild(clone);
 
-// Init
-applyI18n();
+  let speed = 70; // px/s
+  let pos = 0;
+  let lastTime = performance.now();
+  let isDragging = false;
+  let dragStartX = 0;
+  let posStart = 0;
+
+  const lineWidth = () => line.getBoundingClientRect().width;
+
+  function step(now) {
+    const dt = Math.min(0.05, (now - lastTime) / 1000);
+    lastTime = now;
+
+    if (!isDragging) pos -= speed * dt;
+
+    const w = lineWidth();
+    if (pos <= -w) pos += w;
+    if (pos >= 0) pos -= w;
+
+    marquee.style.transform = `translateX(${pos}px)`;
+    requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+
+  // Drag soporte
+  const onDown = (clientX) => { isDragging = true; dragStartX = clientX; posStart = pos; };
+  const onMove = (clientX) => { if (isDragging) pos = posStart + (clientX - dragStartX); };
+  const onUp = () => { isDragging = false; };
+
+  marquee.addEventListener('mousedown', e => onDown(e.clientX));
+  window.addEventListener('mousemove', e => onMove(e.clientX));
+  window.addEventListener('mouseup', onUp);
+
+  marquee.addEventListener('touchstart', e => onDown(e.touches[0].clientX), { passive: true });
+  window.addEventListener('touchmove', e => onMove(e.touches[0].clientX), { passive: true });
+  window.addEventListener('touchend', onUp);
+
+  // Scroll rueda ajusta posición
+  track.addEventListener('wheel', e => { e.preventDefault(); pos -= e.deltaY * 0.5; }, { passive: false });
+
+  // Accesibilidad: teclas para cambiar velocidad
+  track.addEventListener('keydown', e => {
+    if (e.code === 'ArrowRight') speed = Math.min(200, speed + 10);
+    if (e.code === 'ArrowLeft') speed = Math.max(20, speed - 10);
+  });
+})();
