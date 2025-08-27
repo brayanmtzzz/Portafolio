@@ -117,14 +117,12 @@ async function loadProjects() {
   }
 }
 
-// ==================== SKILLS AUTO-SCROLL ====================
-// Duplicamos el contenido para loop continuo
+// ==================== HABILIDADES ====================
 const track = document.getElementById('skillsTrack');
 const firstRow = track.querySelector('.skills-row');
 const cloneRow = track.querySelector('.skills-row.clone');
 cloneRow.innerHTML = firstRow.innerHTML;
 
-// Ajuste de velocidad y pausa on hover (opcional extra)
 track.addEventListener('mouseenter', ()=> {
   firstRow.style.animationPlayState = 'paused';
   cloneRow.style.animationPlayState = 'paused';
