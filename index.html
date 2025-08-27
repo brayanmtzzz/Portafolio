@@ -34,14 +34,12 @@
     <div class="container">
       <a class="navbar-brand fw-bold" href="#home">Brayan Martínez</a>
 
-      <div class="d-flex align-items-center gap-2 order-lg-2">
-        <a class="btn btn-primary btn-sm nav-cta" href="#contacto" data-key="nav_contact">Contacto</a>
-        <button class="btn btn-outline-light btn-sm nav-lang" id="langToggle" aria-label="Change language">EN</button>
-        <button class="navbar-toggler ms-1" type="button" data-bs-toggle="collapse" data-bs-target="#navCollapse">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </div>
+      <!-- Botón hamburguesa -->
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
+      <!-- Menú colapsable -->
       <div class="collapse navbar-collapse" id="navCollapse">
         <ul class="navbar-nav ms-auto align-items-lg-center nav-spaced">
           <li class="nav-item"><a class="nav-link" href="#home" data-key="nav_home">Inicio</a></li>
@@ -49,7 +47,21 @@
           <li class="nav-item"><a class="nav-link" href="#habilidades" data-key="nav_skills">Habilidades</a></li>
           <li class="nav-item"><a class="nav-link" href="#proyectos" data-key="nav_projects">Proyectos</a></li>
           <li class="nav-item"><a class="nav-link" href="#trayectoria" data-key="nav_path">Trayectoria</a></li>
+
+          <!-- Contacto e idioma (ahora dentro del menú hamburguesa en móviles) -->
+          <li class="nav-item d-lg-none mt-2">
+            <a class="btn btn-primary btn-sm w-100" href="#contacto" data-key="nav_contact">Contacto</a>
+          </li>
+          <li class="nav-item d-lg-none mt-2">
+            <button class="btn btn-outline-light btn-sm w-100" id="langToggle" aria-label="Change language">EN</button>
+          </li>
         </ul>
+
+        <!-- En escritorio siguen a la derecha -->
+        <div class="d-none d-lg-flex align-items-center gap-2 ms-3">
+          <a class="btn btn-primary btn-sm nav-cta" href="#contacto" data-key="nav_contact">Contacto</a>
+          <button class="btn btn-outline-light btn-sm nav-lang" id="langToggleDesktop" aria-label="Change language">EN</button>
+        </div>
       </div>
     </div>
   </nav>

@@ -46,42 +46,52 @@ const T = {
   }
 };
 
-// Idioma
-const langToggle = document.getElementById('langToggle');
+// ==================== IDIOMA ====================
+const langToggleMobile  = document.getElementById('langToggle');         // móvil (en menú)
+const langToggleDesktop = document.getElementById('langToggleDesktop');  // escritorio (barra)
 let LANG = localStorage.getItem('lang') || 'es';
 
-// Aplica traducción a [data-key]
+// Refresca el texto de EN/ES en ambos botones
+function setLangButtons() {
+  [langToggleMobile, langToggleDesktop].forEach(btn => {
+    if (btn) btn.textContent = (LANG === 'es') ? 'EN' : 'ES';
+  });
+}
+
+// Aplica traducciones y carga proyectos del idioma activo
 function applyI18n() {
   document.title = T[LANG].page_title;
   document.querySelectorAll('[data-key]').forEach(el => {
     const k = el.getAttribute('data-key');
     if (T[LANG][k]) el.textContent = T[LANG][k];
   });
-  if (langToggle) {
-    langToggle.textContent = LANG === 'es' ? 'EN' : 'ES';
-  }
+  setLangButtons();
   document.documentElement.lang = LANG;
-  loadProjects(); // <-- esto carga el JSON del idioma actual
+  loadProjects(); // carga JSON por idioma
 }
 
-// Toggle idioma
-if (langToggle) {
-  langToggle.addEventListener('click', () => {
-    LANG = (LANG === 'es') ? 'en' : 'es';
-    localStorage.setItem('lang', LANG);
-    applyI18n();
-  });
+// Cambia idioma y persiste
+function handleLangToggle() {
+  LANG = (LANG === 'es') ? 'en' : 'es';
+  localStorage.setItem('lang', LANG);
+  applyI18n();
 }
 
-// Navbar scrolled
+// Listeners para ambos botones (si existen)
+[langToggleMobile, langToggleDesktop].forEach(btn => {
+  if (btn) btn.addEventListener('click', handleLangToggle);
+});
+
+// ==================== NAVBAR SCROLLED ====================
 const nav = document.getElementById('navMain');
 function onScroll() {
+  if (!nav) return;
   if (window.scrollY > 8) nav.classList.add('scrolled');
   else nav.classList.remove('scrolled');
 }
 document.addEventListener('scroll', onScroll);
 
-// Footer year
+// ==================== FOOTER YEAR ====================
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
@@ -126,7 +136,7 @@ async function loadProjects() {
   } catch (e) {
     console.error('Error cargando proyectos', e);
     fallback.classList.remove('d-none');
-    fallback.textContent = LANG === 'es'
+    fallback.textContent = (LANG === 'es')
       ? 'No se pudieron cargar los proyectos.'
       : 'Projects could not be loaded.';
   }
@@ -195,9 +205,10 @@ async function loadProjects() {
 })();
 
 // ===========================
-// INIT 
+// INIT
 // ===========================
 document.addEventListener('DOMContentLoaded', () => {
+  // idioma por defecto
   if (!localStorage.getItem('lang')) {
     LANG = 'es';
     localStorage.setItem('lang', 'es');
