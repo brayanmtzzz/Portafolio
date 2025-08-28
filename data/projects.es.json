@@ -17,6 +17,7 @@
     "stack": ["Flutter", "FastAPI", "SQLite"],
     "imagen": "assets/img/projects/dislexia.png",
     "fecha": "Mar 2025 – May 2025",
+    "repo": "https://github.com/brayanmtzzz/dyslexia_web",
     "link": "https://brayanmtzzz.github.io/dyslexia_web/"
   },
   {
@@ -36,7 +37,8 @@
     "logros": ["Diseño adaptable", "Optimización SEO", "Despliegue en móviles y desktop"],
     "stack": ["HTML", "CSS", "Bootstrap"],
     "imagen": "assets/img/projects/cecum.png",
-    "fecha": "Nov 2024 – Dic 2024"
+    "fecha": "Nov 2024 – Dic 2024",
+    "link": "https://brayanmtzzz.github.io/CECUM/"
   },
   {
     "id": "ecosustentable",
@@ -46,6 +48,7 @@
     "stack": ["HTML", "CSS", "JavaScript"],
     "imagen": "assets/img/projects/ecosustentable.png",
     "fecha": "Sep 2024",
+    "repo": "https://github.com/brayanmtzzz/EcoSustenta",
     "link": "https://brayanmtzzz.github.io/EcoSustenta/"
   },
   {
