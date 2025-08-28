@@ -11,40 +11,50 @@
   },
   {
     "id": "app-educativa",
-    "titulo": "Adaptive Learning Mobile Platform",
-    "descripcion": "Cross-platform app built with Flutter and FastAPI, including interactive tests, progress tracking and offline mode.",
-    "logros": ["Accessible UX", "Progress charts", "Offline synchronization"],
+    "titulo": "Mobile Platform for Children with Dyslexia",
+    "descripcion": "Cross-platform app built with Flutter + FastAPI featuring assessments and interactive exercises tailored to help children with dyslexia.",
+    "logros": ["Accessible UX", "Progress charts", "Offline sync"],
     "stack": ["Flutter", "FastAPI", "SQLite"],
-    "imagen": "assets/img/projects/consultoria.png",
+    "imagen": "assets/img/projects/dislexia.png",
     "fecha": "Mar 2025 – May 2025",
-    "link": "https://brayanmtzzz.github.io/app-educativa"
+    "link": "https://brayanmtzzz.github.io/dyslexia_web/"
   },
   {
     "id": "java-rmi",
     "titulo": "Distributed System for Medical Management",
-    "descripcion": "Java RMI system for managing patients and appointments; SQLite server and Swing client.",
+    "descripcion": "Java RMI for managing patients and appointments; SQLite server and Swing client.",
     "logros": ["Modular architecture", "Remote validation", "Design patterns"],
     "stack": ["Java", "RMI", "SQLite"],
-    "imagen": "assets/img/projects/consultoria.png",
+    "imagen": "assets/img/projects/clinica.png",
     "fecha": "Apr 2025",
     "repo": "https://github.com/brayanmtzzz/Sistema-distribuido-Cliente-Servidor"
   },
   {
     "id": "web-freelance",
-    "titulo": "Freelance Web Development Project",
-    "descripcion": "Responsive website for an educational institution, integrated with Moodle.",
-    "logros": ["Responsive design", "Basic SEO optimization", "Cross-device deployment"],
-    "stack": ["HTML", "CSS", "Bootstrap", "JS"],
-    "imagen": "assets/img/projects/consultoria.png",
+    "titulo": "Web Developer — Freelance Project",
+    "descripcion": "Responsive website for an educational institution with Moodle integration.",
+    "logros": ["Responsive design", "SEO optimization", "Cross-device deployment"],
+    "stack": ["HTML", "CSS", "Bootstrap"],
+    "imagen": "assets/img/projects/cecum.png",
     "fecha": "Nov 2024 – Dec 2024"
   },
   {
+    "id": "ecosustentable",
+    "titulo": "Plastieduca UV — EcoSustentable",
+    "descripcion": "Educational site about recycling with practical projects.",
+    "logros": ["Educational landing", "Responsive carousel", "Modal with guides and materials"],
+    "stack": ["HTML", "CSS", "JavaScript"],
+    "imagen": "assets/img/projects/ecosustentable.png",
+    "fecha": "Sep 2024",
+    "link": "https://brayanmtzzz.github.io/EcoSustenta/"
+  },
+  {
     "id": "liga-mx",
-    "titulo": "Data Modeling — Liga MX",
-    "descripcion": "E/R model with triggers, stored procedures and complex queries.",
+    "titulo": "Relational Database for Liga MX",
+    "descripcion": "Implementation of stored procedures, triggers, and complex queries in MySQL.",
     "logros": ["Referential integrity", "Normalization", "Sample data"],
     "stack": ["MySQL", "SQL"],
-    "imagen": "assets/img/projects/consultoria.png",
+    "imagen": "assets/img/projects/ligamx.png",
     "fecha": "Dec 2023 – Jan 2024"
   }
 ]

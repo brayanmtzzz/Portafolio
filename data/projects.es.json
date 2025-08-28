@@ -11,13 +11,13 @@
   },
   {
     "id": "app-educativa",
-    "titulo": "Plataforma móvil para aprendizaje adaptativo",
-    "descripcion": "App multiplataforma en Flutter + FastAPI con tests interactivos, progreso y modo offline.",
+    "titulo": "Plataforma móvil para niños con dislexia",
+    "descripcion": "App multiplataforma en Flutter + FastAPI con tests y ejercicios interactivos adaptados para mejorar la dislexia en niños.",
     "logros": ["UX accesible", "Gráficas de progreso", "Sync offline"],
     "stack": ["Flutter", "FastAPI", "SQLite"],
-    "imagen": "assets/img/projects/consultoria.png",
+    "imagen": "assets/img/projects/dislexia.png",
     "fecha": "Mar 2025 – May 2025",
-    "link": "https://brayanmtzzz.github.io/app-educativa"
+    "link": "https://brayanmtzzz.github.io/dyslexia_web/"
   },
   {
     "id": "java-rmi",
@@ -25,7 +25,7 @@
     "descripcion": "Java RMI para pacientes y citas; servidor SQLite y cliente Swing.",
     "logros": ["Arquitectura modular", "Validación remota", "Patrones de diseño"],
     "stack": ["Java", "RMI", "SQLite"],
-    "imagen": "assets/img/projects/consultoria.png",
+    "imagen": "assets/img/projects/clinica.png",
     "fecha": "Abr 2025",
     "repo": "https://github.com/brayanmtzzz/Sistema-distribuido-Cliente-Servidor"
   },
@@ -35,16 +35,26 @@
     "descripcion": "Sitio web responsivo para institución educativa con integración a Moodle.",
     "logros": ["Diseño adaptable", "Optimización SEO", "Despliegue en móviles y desktop"],
     "stack": ["HTML", "CSS", "Bootstrap"],
-    "imagen": "assets/img/projects/consultoria.png",
+    "imagen": "assets/img/projects/cecum.png",
     "fecha": "Nov 2024 – Dic 2024"
   },
   {
+    "id": "ecosustentable",
+    "titulo": "Plastieduca UV — EcoSustentable",
+    "descripcion": "Sitio educativo sobre reciclaje con proyectos prácticos.",
+    "logros": ["Landing educativa", "Carrusel responsivo", "Modal con guías y materiales"],
+    "stack": ["HTML", "CSS", "JavaScript"],
+    "imagen": "assets/img/projects/ecosustentable.png",
+    "fecha": "Sep 2024",
+    "link": "https://brayanmtzzz.github.io/EcoSustenta/"
+  },
+  {
     "id": "liga-mx",
-    "titulo": "Modelado de Datos — Liga MX",
-    "descripcion": "Modelo E/R con triggers, procedimientos almacenados y consultas complejas.",
+    "titulo": "Base de Datos relacional para Liga MX",
+    "descripcion": "Implementación de procedimientos almacenados, disparadores y consultas complejas en MySQL.",
     "logros": ["Integridad referencial", "Normalización", "Datos de ejemplo"],
     "stack": ["MySQL", "SQL"],
-    "imagen": "assets/img/projects/consultoria.png",
+    "imagen": "assets/img/projects/ligamx.png",
     "fecha": "Dic 2023 – Ene 2024"
   }
 ]

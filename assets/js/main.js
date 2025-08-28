@@ -126,7 +126,7 @@ async function loadProjects() {
             </div>
             <div class="d-flex gap-2 mt-3">
               ${p.repo ? `<a class="btn btn-outline-light btn-sm" href="${p.repo}" target="_blank" rel="noopener"><i class="bi bi-github"></i> GitHub</a>` : ''}
-              ${p.link ? `<a class="btn btn-primary btn-sm" href="${p.link}" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right"></i> ${LANG === 'es' ? 'Demo' : 'Demo'}</a>` : ''}
+              ${p.link ? `<a class="btn btn-primary btn-sm" href="${p.link}" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right"></i> ${LANG === 'es' ? 'Link' : 'Link'}</a>` : ''}
             </div>
           </div>
         </article>
