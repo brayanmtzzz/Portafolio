@@ -1,5 +1,24 @@
 [
   {
+    "id": "control-administrativo",
+    "titulo": "Sistema de Control Administrativo",
+    "descripcion": "Portal administrativo con autenticación en PHP, roles y módulos dinámicos.",
+    "logros": ["Módulos visibles según permisos", "Navbar con perfil y avatar desde BD", "Sesiones y rutas con SERVERURL"],
+    "stack": ["HTML", "CSS", "Bootstrap", "JS", "PHP"],
+    "imagen": "assets/img/projects/control-administrativo.png",
+    "fecha": "Ago 2025"
+  },
+  {
+    "id": "eminus-tareas",
+    "titulo": "Eminus Tareas",
+    "descripcion": "Gestor ligero de tareas para Eminus con perfiles múltiples, vista combinada, calendario y búsqueda.",
+    "logros": ["Perfiles múltiples", "Vista combinada y calendario", "Búsqueda instantánea"],
+    "stack": ["HTML", "CSS", "Bootstrap", "JS"],
+    "imagen": "assets/img/projects/eminus-tareas.png",
+    "fecha": "Ago 2025",
+    "link": "https://brayanmtzzz.github.io/Eminus-Tareas/"
+  },
+  {
     "id": "consultoria",
     "titulo": "Sitio web para Consultoría Empresarial",
     "descripcion": "Página profesional enfocada en presentar servicios y captar clientes, UI moderna y rápida.",

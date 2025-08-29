@@ -1,5 +1,24 @@
 [
   {
+    "id": "control-administrativo",
+    "titulo": "Administrative Control System",
+    "descripcion": "Administrative portal with PHP authentication, roles, and dynamic modules.",
+    "logros": ["Module visibility by permissions", "Profile navbar with DB avatar", "Sessions and routes using SERVERURL"],
+    "stack": ["HTML", "CSS", "Bootstrap", "JS", "PHP"],
+    "imagen": "assets/img/projects/control-administrativo.png",
+    "fecha": "Aug 2025"
+  },
+  {
+    "id": "eminus-tareas",
+    "titulo": "Eminus Assignments",
+    "descripcion": "Lightweight assignment manager for Eminus with multiple profiles, combined view, calendar, and search.",
+    "logros": ["Multiple profiles", "Combined view & calendar", "Instant search"],
+    "stack": ["HTML", "CSS", "Bootstrap", "JS"],
+    "imagen": "assets/img/projects/eminus-tareas.png",
+    "fecha": "Aug 2025",
+    "link": "https://brayanmtzzz.github.io/Eminus-Tareas/"
+  },
+  {
     "id": "consultoria",
     "titulo": "Business Consulting Website",
     "descripcion": "Professional website focused on showcasing services and acquiring clients, with a modern and fast UI.",
