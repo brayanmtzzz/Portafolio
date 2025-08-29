@@ -47,18 +47,16 @@ const T = {
 };
 
 // ==================== IDIOMA ====================
-const langToggleMobile  = document.getElementById('langToggle');         // móvil (en menú)
-const langToggleDesktop = document.getElementById('langToggleDesktop');  // escritorio (barra)
+const langToggleMobile    = document.getElementById('langToggle');
+const langToggleDesktop = document.getElementById('langToggleDesktop');
 let LANG = localStorage.getItem('lang') || 'es';
 
-// Refresca el texto de EN/ES en ambos botones
 function setLangButtons() {
   [langToggleMobile, langToggleDesktop].forEach(btn => {
     if (btn) btn.textContent = (LANG === 'es') ? 'EN' : 'ES';
   });
 }
 
-// Aplica traducciones y carga proyectos del idioma activo
 function applyI18n() {
   document.title = T[LANG].page_title;
   document.querySelectorAll('[data-key]').forEach(el => {
@@ -67,17 +65,15 @@ function applyI18n() {
   });
   setLangButtons();
   document.documentElement.lang = LANG;
-  loadProjects(); // carga JSON por idioma
+  loadProjects();
 }
 
-// Cambia idioma y persiste
 function handleLangToggle() {
   LANG = (LANG === 'es') ? 'en' : 'es';
   localStorage.setItem('lang', LANG);
   applyI18n();
 }
 
-// Listeners para ambos botones (si existen)
 [langToggleMobile, langToggleDesktop].forEach(btn => {
   if (btn) btn.addEventListener('click', handleLangToggle);
 });
@@ -111,7 +107,7 @@ async function loadProjects() {
 
     list.forEach(p => {
       const col = document.createElement('div');
-      col.className = 'col-md-6'; // 2 por fila desktop
+      col.className = 'col-md-6';
       col.innerHTML = `
         <article class="card-glass project-card h-100">
           <div class="thumb">
@@ -144,7 +140,6 @@ async function loadProjects() {
 
 // ===========================
 // HABILIDADES — Ticker Pro
-// Loop infinito real + Drag
 // ===========================
 (function () {
   const track = document.querySelector('#habilidades .skills-track');
@@ -152,12 +147,11 @@ async function loadProjects() {
   const line = marquee?.querySelector('.skills-line');
   if (!track || !marquee || !line) return;
 
-  // Duplicar contenido (solo para loop interno)
   const clone = line.cloneNode(true);
   clone.setAttribute('aria-hidden', 'true');
   marquee.appendChild(clone);
 
-  let speed = 70; // px/s
+  let speed = 70;
   let pos = 0;
   let lastTime = performance.now();
   let isDragging = false;
@@ -181,7 +175,6 @@ async function loadProjects() {
   }
   requestAnimationFrame(step);
 
-  // Drag soporte
   const onDown = (clientX) => { isDragging = true; dragStartX = clientX; posStart = pos; };
   const onMove = (clientX) => { if (isDragging) pos = posStart + (clientX - dragStartX); };
   const onUp = () => { isDragging = false; };
@@ -194,10 +187,8 @@ async function loadProjects() {
   window.addEventListener('touchmove', e => onMove(e.touches[0].clientX), { passive: true });
   window.addEventListener('touchend', onUp);
 
-  // Scroll rueda ajusta posición
   track.addEventListener('wheel', e => { e.preventDefault(); pos -= e.deltaY * 0.5; }, { passive: false });
 
-  // Accesibilidad: teclas para cambiar velocidad
   track.addEventListener('keydown', e => {
     if (e.code === 'ArrowRight') speed = Math.min(200, speed + 10);
     if (e.code === 'ArrowLeft') speed = Math.max(20, speed - 10);
@@ -208,7 +199,29 @@ async function loadProjects() {
 // INIT
 // ===========================
 document.addEventListener('DOMContentLoaded', () => {
-  // idioma por defecto
+  const navMain = document.getElementById('navMain');
+  const navCollapse = document.getElementById('navCollapse');
+
+  if (navCollapse && navMain) {
+    const bsCollapse = new bootstrap.Collapse(navCollapse, { toggle: false });
+    const menuItems = navCollapse.querySelectorAll('.nav-link, .btn');
+
+    menuItems.forEach(item => {
+      item.addEventListener('click', () => {
+        if (navCollapse.classList.contains('show')) {
+          bsCollapse.hide();
+        }
+      });
+    });
+
+    document.addEventListener('click', (event) => {
+      const isClickInsideNav = navMain.contains(event.target);
+      if (navCollapse.classList.contains('show') && !isClickInsideNav) {
+        bsCollapse.hide();
+      }
+    });
+  }
+
   if (!localStorage.getItem('lang')) {
     LANG = 'es';
     localStorage.setItem('lang', 'es');
